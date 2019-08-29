@@ -1,0 +1,27 @@
+vi:
+  activerecord:
+    models:
+      user: người dùng
+    attributes:
+      user:
+        birthday: Ngày sinh
+        gender: Giới tính
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: không được để trống
+            password:
+              blank: không được để trống
+              too_short: ngắn, ít nhất là %{count} ký tự
+            password_confirmation:
+              confirmation: không trùng
+            username:
+              blank: không được để trống
+            gender:
+              blank: không được để trống
+            birthday:
+              blank: không được để trống
