@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Angilr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'shared/flash' %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <%= link_to root_path do %>
+            <%= image_tag 'logo', width: 150, class: "mx-auto d-block" %>
+          <% end %>
+
+          <%= yield %>
+
+          <div class="text-center">
+            <%= render "users/shared/links" %>
+          </div>
+        </div>
+        <div class="col-lg-4"></div>
+      </div>
+    </div>
+  </body>
+</html>
