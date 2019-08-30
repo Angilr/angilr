@@ -37,7 +37,7 @@
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "new-password", placeholder: "C0m3w!thm3", "aria-describedby" => "passwordHelp", class: "form-control" %>
     <% if @minimum_password_length %>
-      <small id="passwordHelp" class="form-text text-muted">Should be <%= @minimum_password_length %> characters minimum</small>
+      <small id="passwordHelp" class="form-text text-muted">Có ít nhất <%= @minimum_password_length %> ký tự</small>
     <% end %>
   </div>
 
