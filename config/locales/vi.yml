@@ -14,6 +14,7 @@ vi:
           attributes:
             email:
               blank: không được để trống
+              taken: đã được dùng
             password:
               blank: không được để trống
               too_short: ngắn, ít nhất là %{count} ký tự
