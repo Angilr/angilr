@@ -58,4 +58,4 @@ vi:
       expired: "đã hết hạn, xin hãy yêu cầu lại"
       not_found: "không tìm thấy"
       not_locked: "không bị khoá"
-      not_saved: "Có %{count} lỗi làm cho %{resource} này không được lưu:"
+      not_saved: "Có %{count} lỗi xảy ra:"

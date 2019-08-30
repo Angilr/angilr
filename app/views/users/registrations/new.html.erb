@@ -16,15 +16,15 @@
         <div class="form-group">
           <div class="form-check form-check-inline">
             <%= f.radio_button :gender, "male", class: "form-check-input" %>
-            <%= f.label :gender, "Male", value: "male", class: "form-check-label" %>
+            <%= f.label :gender, "Name", value: "male", class: "form-check-label" %>
           </div>
           <div class="form-check form-check-inline">
             <%= f.radio_button :gender, "female", class: "form-check-input" %>
-            <%= f.label :gender, "Female", value: "female", class: "form-check-label" %>
+            <%= f.label :gender, "Nữ", value: "female", class: "form-check-label" %>
           </div>
           <div class="form-check form-check-inline">
             <%= f.radio_button :gender, "not_both", class: "form-check-input" %>
-            <%= f.label :gender, "Not both", value: "not_both", class: "form-check-label" %>
+            <%= f.label :gender, "Không phải hai cái kia", value: "not_both", class: "form-check-label" %>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
 
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "name@example.com", class: "form-control" %>
+          <%= f.email_field :email, autocomplete: "email", placeholder: "name@example.com", class: "form-control" %>
         </div>
 
         <div class="form-group">
@@ -51,12 +51,14 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "C0m3w!thm3", class: "form-control" %>
         </div>
 
-        <div class="actions">
+        <div class="actions text-center mb-2">
           <%= f.submit class: "btn btn-primary" %>
         </div>
       <% end %>
 
-      <%= render "users/shared/links" %>
+      <div class="text-center">
+        <%= render "users/shared/links" %>
+      </div>
     </div>
     <div class="col-lg-4"></div>
   </div>
