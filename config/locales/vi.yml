@@ -22,7 +22,11 @@ vi:
               confirmation: không trùng
             username:
               blank: không được để trống
+              too_short: ngắn, ít nhất là %{count} ký tự
+              too_long: dài, nhiều nhất là %{count} ký tự
+              invalid: không đúng chuẩn
             gender:
               blank: không được để trống
             birthday:
               blank: không được để trống
+              not_in_range: ngoài độ tuổi giới hạn

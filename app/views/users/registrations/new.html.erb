@@ -5,7 +5,8 @@
 
   <div class="form-group">
     <%= f.label :username %>
-    <%= f.text_field :username, placeholder: "minh_ha", class: "form-control" %>
+    <%= f.text_field :username, placeholder: "minh_ha", "aria-describedby" => "usernameHelp", class: "form-control" %>
+    <small id="usernameHelp" class="form-text text-muted">Ký tự đầu tiên là chữ, còn lại có thể là số, chữ cái, - và _</small>
   </div>
 
   <div class="form-group">
@@ -25,7 +26,8 @@
 
   <div class="form-group">
     <%= f.label :birthday %>
-    <%= f.date_field :birthday, min: Date.today - 90.years, max: Date.today, class: "form-control" %>
+    <%= f.date_field :birthday, min: Date.today - 90.years, max: Date.today, "aria-describedby" => "birthdayHelp", class: "form-control" %>
+    <small id="birthdayHelp" class="form-text text-muted">Không hơn 90 tuổi</small>
   </div>
 
   <div class="form-group">
