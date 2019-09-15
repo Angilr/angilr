@@ -1,4 +1,4 @@
-<header>
+<header class="mb-4">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <%= link_to root_path, class: "navbar-brand" do %>
       <strong>Angilr</strong>
@@ -36,6 +36,14 @@
       </form> -->
       <div>
         <% if user_signed_in? %>
+          <span class="nav-item dropdown mr-3">
+            <a class="dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <em><%= current_user.username %></em>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <%= link_to "Thông tin cá nhân", profile_path, class: "dropdown-item" %>
+            </div>
+          </span>
           <%= link_to "Thoát", destroy_user_session_path, class: "btn btn-dark" %>
         <% else %>
           <%= link_to "Đăng ký", new_user_registration_path, class: "btn btn-dark" %>
