@@ -1,0 +1,13 @@
+<h2 class="text-center"><%= t('user.resend_confirmation') %></h2>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="form-group">
+    <%= f.email_field :email, placeholder: "Email của bạn", autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control" %>
+  </div>
+
+  <div class="actions text-center mb-2">
+    <%= f.submit t('user.resend'), class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+vi:
+  activerecord:
+    models:
+      user: người dùng
+    attributes:
+      user:
+        birthday: Ngày sinh
+        gender: Giới tính
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        remember_me: Ghi nhớ tôi
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: không được để trống
+              taken: đã được dùng
+            password:
+              blank: không được để trống
+              too_short: ngắn, ít nhất là %{count} ký tự
+            password_confirmation:
+              confirmation: không trùng
+            username:
+              blank: không được để trống
+              too_short: ngắn, ít nhất là %{count} ký tự
+              too_long: dài, nhiều nhất là %{count} ký tự
+              invalid: không đúng chuẩn
+            gender:
+              blank: không được để trống
+            birthday:
+              blank: không được để trống
+              not_in_range: ngoài độ tuổi giới hạn

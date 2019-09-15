@@ -1,0 +1,54 @@
+<h2 class="text-center"><%= t('user.sign_up') %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "minh_ha", "aria-describedby" => "usernameHelp", class: "form-control" %>
+    <small id="usernameHelp" class="form-text text-muted">Ký tự đầu tiên là chữ, còn lại có thể là số, chữ cái, - và _</small>
+  </div>
+
+  <div class="form-group">
+    <div class="form-check form-check-inline">
+      <%= f.radio_button :gender, "male", class: "form-check-input" %>
+      <%= f.label :gender, "Name", value: "male", class: "form-check-label" %>
+    </div>
+    <div class="form-check form-check-inline">
+      <%= f.radio_button :gender, "female", class: "form-check-input" %>
+      <%= f.label :gender, "Nữ", value: "female", class: "form-check-label" %>
+    </div>
+    <div class="form-check form-check-inline">
+      <%= f.radio_button :gender, "not_both", class: "form-check-input" %>
+      <%= f.label :gender, "Không phải hai loại kia", value: "not_both", class: "form-check-label" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :birthday %>
+    <%= f.date_field :birthday, min: Date.today - 90.years, max: Date.today, "aria-describedby" => "birthdayHelp", class: "form-control" %>
+    <small id="birthdayHelp" class="form-text text-muted">Không hơn 90 tuổi</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "name@example.com", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "C0m3w!thm3", "aria-describedby" => "passwordHelp", class: "form-control" %>
+    <% if @minimum_password_length %>
+      <small id="passwordHelp" class="form-text text-muted">Có ít nhất <%= @minimum_password_length %> ký tự</small>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "C0m3w!thm3", class: "form-control" %>
+  </div>
+
+  <div class="actions text-center mb-2">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

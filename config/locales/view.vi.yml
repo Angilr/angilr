@@ -1,0 +1,15 @@
+vi:
+  helpers:
+    submit:
+      user:
+        create: Đăng ký
+  user:
+    sign_up: Đăng ký tài khoản
+    login: Đăng nhập
+    forgot_password: Quên mật khẩu?
+    not_receive_confirmation_instruction: Không nhận được hướng dẫn xác thực?
+    not_receive_unlock_instruction: Không nhận được hướng dẫn mở khoá?
+    sign_in_with: "Đăng nhập với %{provider}"
+    resend_confirmation: Gửi lại hướng dẫn xác thực
+    resend: Gửi lại
+    send_reset_password: Gửi hướng dẫn đặt lại mật khẩu
