@@ -8,6 +8,7 @@ vi:
         gender: Giới tính
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
+        remember_me: Ghi nhớ tôi
     errors:
       models:
         user:
