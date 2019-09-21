@@ -15,4 +15,23 @@ RSpec.describe User, type: :model do
     it { should_not allow_value(Date.current).for(:birthday) }
     it { should_not allow_value(Date.new(1920, 1, 1)).for(:birthday) }
   end
+
+  describe '#age' do
+    let(:user) { build(:user) }
+
+    it 'later than birthday' do
+      user.birthday = Date.today.change(year: 1993) - 50.days
+      expect(user.age).to eq (Date.today.year - 1993 + 1)
+    end
+
+    it 'in birthday' do
+      user.birthday = Date.today.change(year: 1993)
+      expect(user.age).to eq (Date.today.year - 1993 + 1)
+    end
+
+    it 'earlier than birthday' do
+      user.birthday = Date.today.change(year: 1993) + 50.days
+      expect(user.age).to eq (Date.today.year - 1993)
+    end
+  end
 end

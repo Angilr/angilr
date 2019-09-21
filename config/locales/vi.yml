@@ -1,4 +1,10 @@
 vi:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
   activerecord:
     models:
       user: người dùng

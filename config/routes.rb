@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'general#dashboard'
+    resources :users, only: %i(index)
   end
 end

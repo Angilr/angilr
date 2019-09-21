@@ -9,6 +9,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to 'Người dùng', admin_users_path, class: 'nav-link' %>
+        </li>
       </ul>
       <div>
         <% if admin_signed_in? %>
