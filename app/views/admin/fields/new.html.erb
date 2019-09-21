@@ -1,0 +1,6 @@
+<h1 class="mb-4">Thêm lĩnh vực mới</h1>
+<%= form_with model: [:admin, @field], local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

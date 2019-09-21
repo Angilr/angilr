@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'general#dashboard'
     resources :users, only: %i(index)
+    resources :fields, only: %i(index new create)
   end
 end
