@@ -20,6 +20,12 @@ class User < ApplicationRecord
     devise_mailer.send(notification, self, *args).deliver_later
   end
 
+  def age
+    year = ((Date.today.to_s(:number).to_i - birthday.to_s(:number).to_i) /
+            10_000.0)
+    year.to_i == year ? year + 1 : year.ceil
+  end
+
   private
 
   def in_valid_birthday_range
