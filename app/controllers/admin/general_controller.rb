@@ -1,5 +1,6 @@
-class Admin::GeneralController < Admin::ApplicationController
-  def dashboard
+# frozen_string_literal: true
 
-  end
+# Admin General Actions
+class Admin::GeneralController < Admin::ApplicationController
+  def dashboard; end
 end
