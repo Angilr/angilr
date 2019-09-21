@@ -3,6 +3,8 @@ vi:
     submit:
       user:
         create: Đăng ký
+      field:
+        create: Thêm
   user:
     sign_up: Đăng ký tài khoản
     login: Đăng nhập
