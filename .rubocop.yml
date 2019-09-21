@@ -12,3 +12,6 @@ AllCops:
 
 # other configuration
 # ...
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
